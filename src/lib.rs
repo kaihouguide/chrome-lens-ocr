@@ -61,7 +61,7 @@ pub struct LensClient {
 impl LensClient {
     pub fn new(api_key: Option<String>) -> Self {
         let client = reqwest::Client::builder()
-            .timeout(Duration::from_secs(60))
+            .timeout(Duration::from_secs(90))
             .build()
             .unwrap_or_default();
 
